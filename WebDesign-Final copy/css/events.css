@@ -1,0 +1,68 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Ensure proper spacing at the top */
+main {
+    padding-top: 80px; /* Creates space at the top to avoid cutting off */
+}
+
+/* Section: Upcoming Events */
+.upcoming-events {
+    text-align: center;
+    padding: 20px;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.event-box {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-box img {
+    width: 100%;
+    height: auto;
+}
+
+.event-box h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.event-box p {
+    font-size: 0.9rem;
+    margin: 10px;
+    color: #555;
+}
+
+/* Section: Calendar */
+.calendar-section {
+    margin-bottom:10px;
+    text-align: center; /* Center aligns the section title */
+    padding: 20px;
+}
+
+.calendar-section iframe {
+    display: block; /* Centers the iframe */
+    margin: 0 auto; /* Centers the iframe horizontally */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}

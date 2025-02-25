@@ -1,0 +1,117 @@
+/* General Styling for About Page */
+.about-content {
+    
+    color: #574b44;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2d5551;
+    margin-bottom: 2rem;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Layout Sections */
+.owners, .mission {
+    width: 48%;
+    padding: 1rem;
+    box-sizing: border-box;
+    float: left;
+}
+
+.owners {
+    margin-right: 2%;
+}
+
+.mission {
+    margin-left: 2%;
+}
+
+/* Founder Styling */
+.founder {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.founder img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Store Information Section */
+.store-info {
+    clear: both;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.store-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.store-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.map {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+.contact-info {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.contact-info h3 {
+    color: #2d5551;
+    margin-top: 0.5rem;
+}
+
+.contact-info p {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .owners, .mission {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .store-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map, .contact-info {
+        padding: 0;
+    }
+}

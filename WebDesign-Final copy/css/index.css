@@ -1,0 +1,64 @@
+/* css for home page*/ 
+.featured {
+    text-align: center;
+    padding: 5rem;
+    
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000000; /* Dark green for heading text */
+}
+
+.featured-container {
+    display: flex;
+    justify-content: space-between; /* Spread containers horizontally */
+    gap: 2rem; /* Increase spacing between containers */
+    max-width: 1200px; /* Constrain width to keep layout tidy */
+    margin: 0 auto;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    
+}
+
+.featured-item {
+    background-color: #FFF;
+    border: 2px solid #574b44; /* Dark brown border */
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: calc(33.33% - 2rem); /* Three items per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    
+}
+
+.featured-item img {
+    width: 100%; /* Make the image full width of container */
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    margin-bottom: 1rem;
+}
+
+.featured-item h3 {
+    font-size: 1.5rem;
+    color: #000000; /* Dark green for subheadings */
+    margin-bottom: 0.5rem;
+}
+
+.featured-item p {
+    font-size: 1rem;
+    color: #574b44; /* Dark brown for paragraph text */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .featured-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-item {
+        width: 100%;
+    }
+}
+

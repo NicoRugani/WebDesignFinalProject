@@ -1,0 +1,47 @@
+/* Carousel container */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Carousel images */
+.carousel-images {
+    display: flex;
+    width: 600%; /* 3 images * 2 (due to duplication) */
+    animation: slide 24s ease-in-out infinite; /* Adjusted duration for slower speed */
+}
+
+.carousel-images img {
+    width: 16.66%; /* Each image now takes up 1/6 of the container */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation for sliding images */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.66% { transform: translateX(0); } /* Pause at the first image */
+    25% { transform: translateX(-16.66%); }
+    41.66% { transform: translateX(-16.66%); } /* Pause at the second image */
+    50% { transform: translateX(-33.33%); }
+    66.66% { transform: translateX(-33.33%); } /* Pause at the third image */
+    75% { transform: translateX(-50%); }
+    100% { transform: translateX(-50%); } /* Pause at the last image */
+}
+
+
+/* Headline text over the carousel */
+.headline {
+    font-family: "Averia Serif Libre", serif;
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Offset the element's size to perfectly center */
+    color: #ffffff;
+    font-size: 4em; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a text shadow for contrast */
+    z-index: 2; /* Ensure the headline appears over the carousel */
+}
+
