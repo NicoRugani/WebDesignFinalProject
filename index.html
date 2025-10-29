@@ -13,6 +13,37 @@
     <link rel="icon" href="images/outdoor-adventure-logo-black.svg" type="image/x-icon">
 
     <title>Outdoor Adventures</title>
+    <script>
+    const track = document.querySelector('.carousel-images');
+    const slides = document.querySelectorAll('.carousel-images img');
+    const slideWidth = slides[0].clientWidth;
+    
+    let index = 0;
+
+    function nextSlide() {
+        index++;
+        
+        // If we hit the duplicated end, instantly jump back
+        if (index >= slides.length) {
+            index = 0;
+            track.style.transition = "none";
+            track.style.transform = `translateX(0px)`;
+            // Allow browser to reflow, then restart animation
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    track.style.transition = "transform 0.6s ease";
+                });
+            });
+        } else {
+            track.style.transition = "transform 0.6s ease";
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+    }
+
+    // Auto slide every 3 seconds
+    setInterval(nextSlide, 3000);
+</script>
+
 </head>
 <body>
     <header>
